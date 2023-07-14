@@ -1,2 +1,2 @@
-# -income-and-expense-management-system
+# income-and-expense-management-system
 ระบบจัดการรายรับ รายจ่าย
