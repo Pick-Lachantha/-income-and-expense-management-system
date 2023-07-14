@@ -1,3 +1,3 @@
-# income-and-expense-management-system
+# accountant
 ระบบจัดการรายรับ รายจ่าย HTML, CSS & Javascript
  
