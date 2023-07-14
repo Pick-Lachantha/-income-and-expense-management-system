@@ -1,2 +1,3 @@
 # income-and-expense-management-system
-ระบบจัดการรายรับ รายจ่าย
+ระบบจัดการรายรับ รายจ่าย HTML, CSS & Javascript
+ 
