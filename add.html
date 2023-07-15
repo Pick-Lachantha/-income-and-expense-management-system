@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accountant</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h3> เพิ่มข้อมูล</h3>
+        <div>
+            <p style="margin-top: 15px; font-size: 1.1rem;">ประเภท</p>
+            <select class="form-control" id="" style="margin-bottom: 10px;">
+                <option value="">--เลือก---</option>
+                <option value="รายรับ">รายรับ</option>
+                <option value="รายจ่าย">รายจ่าย</option>
+            </select>
+        </div>
+        <div>
+            <p >จำนวนเงิน</p>
+            <input type="text" class="form-control" placeholder="โปรดกรอกจำนวนเงิน">
+        </div>
+        <div>
+            <p style="margin-top: 15px; font-size: 1.1rem;">รูปภาพสลิป</p>
+            <div class="upload-image">
+                <p style="margin-left: 10px;">อัพโหลดรูปภาพ</p>
+            </div>
+        </div>
+        <div style="display: flex;">
+            <a href="./index.html" class="btn btn-cancel" style="margin-right: 10px;">ยกเลิก</a>
+            <div class="btn  btn-success">บันทึก</div>
+        </div>
+    </div>
+</body>
+</html>
