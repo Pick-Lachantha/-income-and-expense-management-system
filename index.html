@@ -36,7 +36,7 @@
         <div class="tag">รายจ่าย</div>
         </div>
 
-        <div style="margin-top: 10px;">
+        <div id="render_statement" style="margin-top: 10px;">
           
             <div class="statement">
                 <div style="display: flex; align-items: center;">
@@ -72,6 +72,18 @@
     </div>
 
     <script>
+        var response ={
+            code: 200,
+            result: [{
+                id: 1,
+                type: "PAYMENT",
+                title: "ค่าข้าว",
+                amount: 100,
+                doingtime: "2023-07-15 21:57",
+                slip:"https://s359.kapook.com/pagebuilder/ba154685-db18-4ac7-b318-a4a2b15b9d4c.jpg"
+            },{},{}]
+        }
+
         $(document).ready(()=>{
             var amount = {
                 remaining: 3000,
