@@ -21,12 +21,12 @@
 
         <div  style="display: flex; justify-content: space-between;">
             <a href="./add.html" class="box success" style="margin-right: 10px;">
-                ราบรับ
-                15,000
+                <p>ราบรับ</p>
+                <p id="txt_income"></p>
             </a> 
             <a href="./add.html" class="box danger" style="margin-left: 10px;">
-                รายจ่าย
-                15,000
+                <p>รายจ่าย</p>
+                <p id="txt_outcome"></p>
             </a>
         </div>
 
@@ -79,8 +79,24 @@
 
     <script>
         $(document).ready(()=>{
-
+            var amount = {
+                remaining: 3000,
+                income: 5000,
+                outcome: 100,
+            }
+            $("#txt_remaining").text(numberWithCommas(amount.remaining));
+            $("#txt_income").text(numberWithCommas(amount.income));
+            $("#txt_outcome").text(numberWithCommas(amount.outcome));
         })
+
+        function numberWithCommas(x) {
+            x = x.toString();
+            var pattern = /(-?\d+)(\d{3})/;
+            while (pattern.test(x))
+                x = x.replace(pattern, "$1,$2");
+            return x;
+        }
+
     </script>
 </body>
 </html>
