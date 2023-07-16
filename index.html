@@ -39,10 +39,25 @@
 
         <div id="render_statement" style="margin-top: 10px;">
 
+            <div class="statement">
+                <div style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-money-check" style="font-size: 30px;"></i>
+                    <div style="margin-left: 15px;">
+                        <p style="font-size: 12px;">รายรับ</p>
+                        <p class="text-success" style="font-size: 14px;">+ 100 บาท</p>
+                        <p class="text-gray" style="font-size: 10px;">2023-07-17 22:02</p>
+                    </div>
+                </div>
+
+                <div style="display: none; margin-top: 10px; justify-content: center;">
+                    <img src="https://s359.kapook.com/pagebuilder/ba154685-db18-4ac7-b318-a4a2b15b9d4c.jpg" style="width: 80%; object-fit: contain; border-radius: 10px;">
+                </div>
+            </div>
+
 
             <div class="statement">
                 <div style="display: flex; align-items: center;">
-                    
+                    <i class="fa-solid fa-basket-shopping" style="font-size: 30px;"></i>
                     <div style="margin-left: 15px;">
                         <p style="font-size: 12px;">ค่าข้าว</p>
                         <p class="text-danger" style="font-size: 14px;">- 100 บาท</p>
@@ -58,82 +73,6 @@
         </div>
     </div>
 
-    <script>
-        var response = {
-            code: 200,
-            result: [{
-                id: 1,
-                type: "PAYMENT",
-                title: "ค่าข้าว",
-                amount: 100,
-                doingtime: "2023-07-15 21:57",
-                slip:"https://s359.kapook.com/pagebuilder/ba154685-db18-4ac7-b318-a4a2b15b9d4c.jpg",
-            },{
-                id: 2,
-                type: "TOPUP",
-                title: "รายรัย",
-                amount: 2000,
-                doingtime: "2023-07-14 03:14",
-                slip:"https://s359.kapook.com/pagebuilder/ba154685-db18-4ac7-b318-a4a2b15b9d4c.jpg",
-            }]
-        }
 
-        $(document).ready(()=>{
-            var amount = {
-                remaining: 3000,
-                income: 5000,
-                outcome: 100,
-            }
-            $("#txt_remaining").text(numberWithCommas(amount.remaining));
-            $("#txt_income").text(numberWithCommas(amount.income));
-            $("#txt_outcome").text(numberWithCommas(amount.outcome));
-
-
-            if(response.code == 200){
-
-                var html="";
-                for (let i = 0; i < response.result.length; i++) {
-                    const element = response.result[i];
-                    //console.log(element.id)
-
-                    var obj = {}
-                    if (element.type =="PAYMENT") {
-                        obj.icon =`<i class="fa-solid fa-basket-shopping" style="font-size: 30px;"></i>`;
-
-                    }else{ //TOPUp
-                        obj.icon =`<i class="fa-solid fa-money-check" style="font-size: 30px;"></i>`;
-
-                    }
-
-                    html +=`          
-                        <div class="statement">
-
-                            <div style="display: flex; align-items: center;">
-                                <div style="margin-left: 15px;">
-                                    <p style="font-size: 12px;">รายรับ</p>
-                                    <p class="text-success" style="font-size: 14px;">+ 100 บาท</p>
-                                    <p class="text-gray" style="font-size: 10px;">2023-07-17 22:02</p>
-                                </div>
-                            </div>
-
-                            <div style="display: none; margin-top: 10px; justify-content: center;">
-                                <img src="https://s359.kapook.com/pagebuilder/ba154685-db18-4ac7-b318-a4a2b15b9d4c.jpg" style="width: 80%; object-fit: contain; border-radius: 10px;">
-                            </div>
-                        </div>
-                        `;
-                    
-                }
-            }
-        })
-
-        function numberWithCommas(x) {
-            x = x.toString();
-            var pattern = /(-?\d+)(\d{3})/;
-            while (pattern.test(x))
-                x = x.replace(pattern, "$1,$2");
-            return x;
-        }
-
-    </script>
 </body>
 </html>
